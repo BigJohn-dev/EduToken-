@@ -1,53 +1,66 @@
-# Contributing to EduToken
+# Contributing Guide
 
-Thank you for your interest in contributing! EduToken is an open-source protocol — contributions across engineering, design, and documentation are all welcome.
+Thank you for your interest in contributing!
 
-## Getting Started
+## Quick Start
 
-1. Fork the repository and clone it locally.
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Make your changes (see guidelines below).
-4. Commit with a clear message: `git commit -m "feat: describe your change"`
-5. Push and open a Pull Request against `main`.
+1. **Fork** the repository
+2. **Clone** your fork locally
+3. Create a **feature branch** from `main`
+4. Make your changes
+5. Submit a **Pull Request**
 
 ## Development Setup
 
-### Frontend (Next.js)
-
 ```bash
-cd frontend
+git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
+cd REPO_NAME
 npm install
 npm run dev
 ```
 
-### Soroban Smart Contracts (Rust)
+## Branch Naming
 
-```bash
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+- `feat/` - New features
+- `fix/` - Bug fixes
+- `docs/` - Documentation
+- `refactor/` - Code refactoring
+- `test/` - Test additions
+- `chore/` - Maintenance
 
-# Add wasm target
-rustup target add wasm32-unknown-unknown
+## Commit Messages
 
-# Install Soroban CLI
-cargo install --locked soroban-cli
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
-# Build the contract
-cd contracts/eduvault
-cargo build --release --target wasm32-unknown-unknown
+```
+feat(scope): description
+fix(scope): description
+docs(scope): description
 ```
 
-## Code Guidelines
+## Pull Request Process
 
-- **Frontend**: TypeScript strict mode; follow existing component patterns.
-- **Contracts**: Keep functions minimal and well-documented; always `require_auth()` for mutations.
-- **Commits**: Use [Conventional Commits](https://www.conventionalcommits.org/) style (`feat:`, `fix:`, `docs:`, etc.).
-- **Tests**: Add contract unit tests for any new entry points.
+1. Ensure your branch is up to date with `main`
+2. Write clear PR titles
+3. Include tests for new features
+4. Update documentation if needed
+5. Request review from maintainers
 
-## Reporting Issues
+## Code Standards
 
-Open an issue on GitHub with a clear description and reproduction steps.
+- Follow existing code style
+- Write meaningful comments
+- Keep functions small and focused
+- Add tests for new functionality
+
+## Claiming a Bounty
+
+1. Comment on the issue to claim it
+2. Reference the issue number in your PR
+3. Include `Wallet: YOUR_WALLET` in the PR description
 
 ## Code of Conduct
 
-Be respectful and constructive. We're here to build something meaningful together.
+Be respectful, constructive, and inclusive.
+
+Thank you for contributing!
